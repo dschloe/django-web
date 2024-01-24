@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from config.views import main # views.py에서 main 함수 가져오기
-from config.views import burger_list
+from config.views import main, burger_list
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", main), # 공백과 main 함수 연결
+    path('admin/', admin.site.urls),
+    path("", main), 
     path("burgers/", burger_list)
+
+
 ]
